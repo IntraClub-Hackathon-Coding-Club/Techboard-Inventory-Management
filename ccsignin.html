@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Club Directory</title>
+    <link rel="stylesheet" href="ccsignin.css">
+</head>
+
+<body>
+    <div class="logo"><img src="/images/CC.jpeg" alt="CC"></div>
+    <div class="form-box">
+        <h1>Login Here</h1>
+        <div class="input-box">
+            <input type="text" id="username" placeholder="User-id">
+        </div>
+        <div class="input-box">
+            <input type="password" id="myInput" placeholder="Password">
+        </div>
+        <div class="cbox">
+            <input type="checkbox" onclick="myFunction()">Show password
+        </div>
+
+        <br>
+        <br>
+
+        <div class="final">
+            <button type="submit" onclick="validate()">Sign In</button>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+
+    <script>
+        function validate() {
+            var uname = document.getElementById("username").value;
+            var pwd = document.getElementById("myInput").value;
+            if ((uname == "Gunjan Senior" && pwd == "bhaiya") || (uname == "Samyak Senior" && pwd == "bhaiya")) {
+                window.location.replace('./option.html');
+            }
+            else {
+                alert("Invalid login credentials. Please try again");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
